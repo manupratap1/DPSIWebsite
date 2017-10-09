@@ -1,0 +1,1173 @@
+  <html>
+<head>
+<script type="text/javascript" src="sliderengine/jquery.js"></script><script type="text/javascript" src="sliderengine/jquery.hislider.js"></script>
+
+<style>
+
+.nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  
+}
+.spacer {
+  height: 100px;
+}
+.post span {
+  position: absolute;
+  float:bottom;
+  color:white;
+  font-size:20px;
+  padding-left:20px;
+  padding-top:10px;
+  
+}
+.post img {
+  width: 100%;
+}
+</style>
+<style>
+/* Style The Dropdown Button */
+.dropbtn {
+   background:none;
+    
+  font-size:22px;
+font-family:Arial;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn a:hover {background-color: #CEF6F5;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 280px;
+  
+  font-size:20px;
+font-family:Arial;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+    z-index: 5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+	 border-bottom: 2px solid #02023a;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #CEF6F5;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #CEF6F5;
+}
+</style>
+<style>
+.DEEPESH2 {display:none;}
+</style>
+<style>
+
+ 
+
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #02023a;
+  height:10px;
+ 
+  font-weight:bold;
+ font-size:18px;
+  padding-top:70% ;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  
+}
+
+.active {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 100px) {
+  .text {font-size: 11px}
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:bold">
+<link rel="stylesheet" type="text/css"  href='http://fonts.googleapis.com/css?family=Dancing+Script'>
+</head>
+<body >
+   <div class="nav">
+   
+  
+ <table width="99%" border=0  style="background-color: #02023a;
+  color:white;">
+    <tr>
+      <td >
+		     <a href="newindex.html" style="text-decoration:none;">
+					  <table border=0 style="background-color: #02023a;
+  color:white;">
+					  <tr>
+					  <td>
+				      <img src="img/dpslogo.png" width=10% alt="DPSI Logo"  style="float:left;"/>
+			          
+			            <font style="margin-left:5px;font-size:30px;font-family:Arial">DPS INTERNATIONAL SCHOOL</font><BR/><font style="margin-left:6px;font-family:Arial"> NEW DELHI, INDIA</font>
+			          </td>
+			          </tr>
+			          </table>
+			  </a>
+        </td>
+			
+			<td   style="text-align:right;vertical-align:top;font-family:arial;font-size:14px;">
+						<a href="newindex.html" style="color:white;margin-right:5px">Home</a>/
+						<a href="contactus.php" target="_blank" style="color:white;margin-right:5px">Contact Us</a>/
+						<a href="achievements.php"  target="_blank" style="color:white;margin-right:5px">A-Z index</a>/
+						<!--<a href="achievements.php" style="color:white;margin-right:5px">Language</a><br/>-->
+						
+			</td>
+			<td style="vertical-align:top;
+  color:white;">                    
+                          <div align=right style="margin-top:2px;margin-right:2px;" >
+						
+						  <table style="font-family:Arial;color:white;" border=0>
+						  <tr>
+						  <td>
+                          Login: 
+						  </td>
+						  <td>
+                          <input type="text" style="width=50%;background:white;border:solid white 2px;color:blue;" placeholder="Enter User Name"/>
+						  </td>
+                          </tr>
+						  <tr>
+						  <td>
+                          Password: 
+						  </td>
+						  <td>
+                          <input type="password" style="width=50%;margin-top:10px;background:white;border:solid white 2px;color:blue;" placeholder="Enter User Password" />
+						  </td>
+						  </tr>
+						  </table>
+						
+                          </div>
+              </td>
+                          </tr>
+  <tr   style=" border-spacing: 0px;height:5px;background:#ff9900"><td align=center colspan=3></td>
+  </tr>
+  <tr   style=" border-spacing: 0px;">
+      <td align=center colspan=3>
+	           
+                                   <table width=100% border=0 style="text-align:center;background:#ffd11a;color:black; border-spacing: 0px;">
+                                   <tr style="height:30px;font-family:arial;">
+                                   <td>
+								  
+<div class="dropdown">
+  <button class="dropbtn"> <a href="aboutus.php"  style="text-decoration:none;"  target="_blank">About Us </a></button>
+  <div class="dropdown-content">
+     <a href="dpssociety.php" style="text-decoration:none;color:black;"  >DPS Society </a>
+    <a  href="principal.php" style="text-decoration:none;color:black">Principal's Message</a>
+   <a  href="mission.php" style="text-decoration:none;color:black">Mission & Vision</a>
+	<a  href="team.php" style="text-decoration:none;color:black">Our Academic Team</a>
+ 	<!--<a href="infrastructure.php" style="text-decoration:none;color:black;" target="_blank">
+                                         Infrastructure
+										 </a>-->
+                                    
+
+  </div>
+</div>
+</td>
+<!--
+<td>
+    <div class="dropdown">
+    <button class="dropbtn"> <a href="awards.php"  style="text-decoration:none;color:black;"  target="_blank">Awards </a></button>
+     <div class="dropdown-content">
+     <a href="awards.php" style="text-decoration:none;color:black;"  >School's Awards </a>
+    <a  href="studentaward.php" style="text-decoration:none;color:black">Students' Awards</a>
+     <a  href="teacheraward.php" style="text-decoration:none;color:black">Teachers' Awards</a>
+	
+  </div>
+   </div>                                      
+</td>
+                                        
+-->										
+										
+<td>
+     <div class="dropdown">
+  <button class="dropbtn"> <a href="results.php"  style="text-decoration:none;color:black;"  target="_blank">Results </a></button>
+  <div class="dropdown-content">
+     <a href="globaltoppers.php" style="text-decoration:none;color:black;"  >Globals/All India Toppers  </a>
+	  <a  href="Aleveltoppers.php" style="text-decoration:none;color:black">A Level School Toppers</a>
+     <a href="Igcsetoppers.php" style="text-decoration:none;color:black;"  >IGCSE  School Toppers</a>
+   
+	<a  href="Interschoolcompetitionresults.php" style="text-decoration:none;color:black">Inter School Competition</a>
+  </div>
+</div>
+</td>
+
+
+<td>
+     <div class="dropdown">
+  <button class="dropbtn"> <a href="universityadmissions.php" target="_blank" style="text-decoration:none;color:black;" >
+                                        University Placements </a></button>
+ 
+</div>
+
+</td>
+
+
+<td>
+<div class="dropdown">
+  <button class="dropbtn"> <a   href="admission.php" style="text-decoration:none;color:black;"  target="_blank">
+                                        Admissions </a>
+  </button>
+  
+</div>
+</td>
+
+
+ <td>
+										
+<div class="dropdown">
+  <button class="dropbtn">  <a   href="schoolprogrammes.php" style="text-decoration:none;color:black;" target="_blank">
+                                        School Programmes </a>
+  </button>
+  <div class="dropdown-content">
+      <a href="academiccurriculum.php" style="text-decoration:none;" target="_blank">Academic Curriculum</a>
+	   <a href="cocurriculum.php" style="text-decoration:none;" target="_blank">Co- Curricular</a>
+	  <a href="academictiming.php" style="text-decoration:none;" target="_blank">Academic Terms & Timings</a>
+	<a href="assessmentschedule.php" style="text-decoration:none;" target="_blank">Assessment Schedule</a>
+	<a href="communityservices.php" style="text-decoration:none;" target="_blank">
+	Community Service</a>
+	<a href="mun.php" style="text-decoration:none;" target="_blank">Model United Nations</a>
+	<a href="internationalexchanges.php" style="text-decoration:none;" target="_blank">
+	International Exchanges</a>
+	 <a href="facetofaith.php" style="text-decoration:none;" target="_blank">Generation Global Programme</a>
+	  <a href="middaymeal.php" style="text-decoration:none;" target="_blank">Mid Day Meal</a>
+	  <a href="transportation.php" style="text-decoration:none;" target="_blank">Transportation</a>
+  </div>
+</div>
+
+
+
+
+
+                                    </td>
+
+								<td>
+<div class="dropdown">
+  <button class="dropbtn"> <a   href="calendar.php" style="text-decoration:none;color:black;"  target="_blank">
+                                       Calendar </a>
+  </button>
+  
+</div>
+
+								 
+										 
+                                    </td>
+                                       
+                                        <td>
+
+										<div class="dropdown">
+  <button class="dropbtn"> <a   href="alumni.php" style="text-decoration:none;color:black;"  target="_blank">
+                                        Alumni </a>
+  </button>
+  
+</div>
+										 
+                                    </td>
+                                       
+                                        <td>
+
+										<div class="dropdown">
+  <button class="dropbtn"> <a   href="gallery.php" style="text-decoration:none;color:black;"  target="_blank">
+                                         Gallery </a>
+  </button>
+  
+</div>
+                                       
+                                    </td>
+                                        <td>
+										  <div class="dropdown">
+  <button class="dropbtn"> <a   href="vacancy.php" style="text-decoration:none;color:black;"  target="_blank">
+                                    Job Vacancy </a>
+  </button>
+  
+</div>
+										
+                                    </td>
+                                        </tr>
+                                        </table>
+										</td>
+										</tr>
+ <tr   style=" border-spacing: 0px;height:5px;background:#ff9900"><td align=center colspan=3></td>
+  </tr>
+  </table>
+   </div>  <!--top header inserted here-->
+
+<br/>
+<!--<div class="spacer">this is used to give space after menu bar</div>-->
+
+
+
+<!-- photo slider here--->
+
+<div id='hislider1' style=" max-width:1200px;padding-top:100px;  max-height:2400px; margin: 0 auto;
+ ">      	
+        	
+ </div>
+
+<!--photo slider ended here-->
+
+
+<!-- sample of span on image 
+
+<div class="post" > 
+     <span style="padding-left:30px; padding-top: 30px;">
+	      <div style="background:black;opacity:.5">
+		       <font size=30 color=white>deepesh</font>
+		  </div>
+	</span>
+    <img src="1.jpg" />
+</div>
+-->
+<center>
+<br/>
+<table width=1200px  style="height:350px;background: white;box-shadow:5px 5px 5px 5px #888888;overflow:hidden" cellspacing=40px >
+  <tr >
+  <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;" rowspan=2>
+  <table style="height:100%" border=0>
+  <tr><td style="vertical-align:top;">
+   <div style="height:30px;background:#ff9900;color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;box-shadow:5px 5px 5px 0px #888888;" >Latest Happenings</div>
+
+   <div style="text-align:center;padding:2px;color:#02023a;margin-top:10px;">
+
+ <img src="img/latesthappening/therussianassembly.jpg" style="width:95%;box-shadow:5px 5px 5px 5px #888888;overflow:hidden;" /><br/>
+   
+	 <table style="text-align:justify;padding:10px;color:#02023a;font-size:18px;">
+	 <tr>
+	 <td width=10%>
+   <img src="img/arrow.png" style="width:100%"/>
+     </td>
+	 <td>The Russian  assembly held @ DPSI 
+	 </td>
+	 </tr>
+	 </table>
+  
+ 
+   <img src="img/latesthappening/cansupportwalkforlife.jpg" style="width:95%;box-shadow:5px 5px 5px 5px #888888;overflow:hidden;" /><br/>
+
+	 <table style="text-align:justify;padding:10px;color:#02023a;font-size:18px;">
+	 <tr>
+	 <td width=10%>
+   <img src="img/arrow.png" style="width:100%"/>
+     </td>
+	 <td>D.P.S. International School, Saket Participated in the Can Support "Walk For Life"
+	 </td>
+	 </tr>
+	 </table>
+
+
+
+ <img src="img/latesthappening/itdaymay2017.jpg" style="width:95%;box-shadow:5px 5px 5px 5px #888888;overflow:hidden;" /><br/>
+
+	 <table style="text-align:justify;padding:10px;color:#02023a;font-size:18px;">
+	 <tr>
+	 <td width=10%>
+   <img src="img/arrow.png" style="width:100%"/>
+     </td>
+	 <td>IT Day celebrated @DPSI
+	 </td>
+	 </tr>
+	 </table>
+   </div>
+   </td></tr>
+     <tr style="height:20px;"><td>
+
+
+    <div style="float:right;background:#02023a;height:20px;"> <a href="latesthappening.php" style="text-decoration:none;color:white;padding:10px;"  target="_blank">
+                                       Read More </a>
+     </div>
+	 </td></tr></table>
+  
+  </td>
+  <td style="width:32%;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;">
+
+  <table style="height:100%; width:100%" border=0>
+  <tr><td style="vertical-align:top;">
+   <a href="eminentvisitors.php" target="_blank"  style="text-decoration:none;" >
+<div style="width:100%;height:30px;background:#ff9900;color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;box-shadow:5px 5px 5px 0px #888888;" >Eminent Visitors </div>
+
+  <div style="margin:12px;box-shadow:5px 5px 5px 5px #888888;" >
+ 
+ 
+    <div class="w3-content w3-section" style="max-width:500px">
+
+  <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Dr. Mahesh Sharma - Union Minister, Tourism & Culture.jpg" />
+
+  <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. Anshu Gupta - Reciepent Ramon Magsaysay Award.jpg" />
+
+  <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. Michael O'Sullivan - Chief Executive of Cambridge International Examinations.jpg" />
+
+  <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/UPSC Topper Ms. Ira Singhal.jpg" />
+
+  <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Ms. Shovana Narayan Renowned Kathak Dancer (2015).jpg" />
+
+  <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Ms. Hashima Hasan - Scientist, James Webb Space.jpg" />
+
+  <!--<img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/H.E. Gustavo Manuel DE ARiSTEGUI Y SAN ROMÁN Ambassador of Spain.jpeg" />-->
+
+   <img class="DEEPESH2"  style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. Vikas Swarup - Jt. Secretary, Minister of External Affairs , Eminent Author.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/UK PRINCIPALS VISIT.jpg" />
+
+   <img class="DEEPESH2" class="DEEPESH2"  style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Dr. Shashi Tharoor - HRD, Minister of State.jpg" />
+
+   <img class="DEEPESH2"  style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/H.E. Francois Richier - Ambassador of France to India (2013).jpg" />
+
+   <img class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. Martin Strub - Charge' d' Affaires , Embassy of Switzerland.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. Vikram Seth - Eminent Author.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Prof. Dinesh Singh- Vice Chancellor, University of Delhi.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. Kapil Sibal - Minister HRD & Law & Justice.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. Kapil Sibal - Minister HRD & Law & Justice.(201 1).jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Justice (Mrs.) Leila Seth (2011).jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Dr. Mary Ellen Webber - NASA Astronaut.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Jerome Bonnafont - Ambassadoe of France to India.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. Tejendra Khanna - H.E. Lt Gov of Delhi.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Mr. William Bickerdike-Regional Manager, Cambridge International Examinations.jpg" />
+
+   <img  class="DEEPESH2" style="width:100%;box-shadow: 5px 0px 10px 10px #888888;" src="img/eminent/Ms.  Rina Ray - Secretary Education.jpg" />
+
+  
+</div>
+
+<script>
+var myIndex = 0;
+carouse2();
+
+function carouse2() {
+    var i;
+    var x = document.getElementsByClassName("DEEPESH2");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carouse2, 2000); // Change image every 2 seconds
+}
+</script>
+ 
+ 
+ 
+ </div>
+
+
+
+<br/>
+ 
+   </a>
+   </td></tr>
+     <tr style="height:20px;"><td>
+
+
+    <div style="float:right;background:#02023a;height:20px;"> <a href="eminentvisitors.php" style="text-decoration:none;color:white;padding:10px;"  target="_blank">
+                                       Read More </a>
+     </div>
+
+	 </td></tr></table>
+   
+
+
+	 
+  
+  </td>
+   <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;">
+
+   <table style="height:100%;width:100%" border=0>
+   <tr><td style="vertical-align:top;">
+   <div style="height:30px;background:#ff9900;color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;box-shadow:5px 5px 5px 0px #888888;" >Information & Circulars</div>
+
+
+<marquee  direction="up" height=200px; scrollamount="2"   onmouseover="stop();"  onmouseout="start();"
+ >
+    
+ <center>
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    Weekly Assessment 10th July 2017
+					   <br/>
+					    <span style=" font-weight: bold;color: #008080;">Updated on: 01, July 2017</span>
+					 
+					
+					     
+                        
+</p></a><br/>
+
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    	
+                       Parent Circular No.032 - French Exam
+					   <br/>
+					    <span style=" font-weight: bold;color: #008080;"> Updated on:01, July 2017</span>
+					 
+					
+					     
+                        
+</p></a><br/>
+<a href="http://www.dpsi.ac.in/dpsInternational/Userform/News/News_NewSKT.asp?CCode=2026" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    	
+                      South Africa: Country Presentation 
+					   <br/>
+					    <span style=" font-weight: bold;color: #008080;"> Updated on:12, May 2017</span>
+					 
+					
+					     
+                        
+</p></a><br/>
+
+<a href="reassessmentschedule.html" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    	
+                        Re-Assessment  Exam Schedule 2017
+					   <br/>
+					   <span style=" font-weight: bold;color: #008080;"> Updated on:10, May 2017</span>
+					 
+					
+					     
+                        
+</center>
+                    </marquee>
+	</td></tr>
+	 
+
+	<tr style="height:20px;"><td>
+	<div style="float:right;background:#02023a;height:20px;"> <a href="achievements.php" style="text-decoration:none;color:white;padding:10px;"  target="_blank">
+                                       Read More </a>
+     </div>
+	</td></tr></table>
+
+
+	
+	 
+  </td>
+  </tr>
+
+   <tr >
+  <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;" >
+     <table style="height:50%; width:100%" border=0>
+  <tr><td style="vertical-align:top;">
+   <div style="width:100%;height:30px;background:#ff9900;color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;box-shadow:5px 5px 5px 0px #888888;" > 
+     <table width=100% >
+      <tr><td width=90% style="color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;vertical-align:top;">  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Green School Award <br/></td>
+	      <td><img src="img/gogreen/award.png" style="width:100%;" /></td>
+	  </tr>
+	  </table>
+	</div>
+
+  <div style="text-align:center;padding:2px;margin:5px;color:#02023a;margin-top:10px;">
+
+ <img src="img/gogreen/award4.jpg" style="width:95%;box-shadow:5px 5px 5px 5px #888888;overflow:hidden;" /><br/>
+   
+
+
+
+   <p style="text-align:justify;padding-top:10px;padding-left:10px;padding-right:10px;font-size:18px;">
+   DPS International completed the GSP Audit 2016 successfully and came in green category .We also achieved the GSP green logo.<br/><br/> <br/><br/><!--The Audit is based on the enquiry, monitor the resources consumed in our school and finding ways to reduce wastage which helped in adding value to the teaching- learning process in classroom.
+Green School Programme (GSP) is the pioneer environment school certification initiative. It engages students and teachers in a structured environment awareness curriculum. The Center for Science and Environment (CSE) took initiative and GSP.
+Audit 2016 conducted in DPS International. Around 700 schools in India participated. -->
+   </p>
+
+   
+   </td></tr>
+     <tr style="height:20px;"><td>
+
+
+    <div style="float:right;background:#02023a;height:20px;"> <a href="greenaward.php" style="text-decoration:none;color:white;padding:10px;"  target="_blank">
+                                       Read More </a>
+     </div>
+
+	 </td></tr></table>
+
+	 </td>
+	  <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;" >
+
+	   <table style="height:100%; width:100%" border=0>
+  <tr><td style="vertical-align:top;">
+   
+<a href="achievements.php" style="text-decoration:none;"  target="_blank">
+    <div style="width:100%;height:30px;background:#ff9900;color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;box-shadow:5px 5px 5px 0px #888888;" >Highlights </div>
+
+	<!-- code of slide show-->
+	 <marquee  direction="up" height=280px; scrollamount="4"   onmouseover="stop();"  onmouseout="start();"
+ >
+    
+ <center>
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+                   ANSHUL BUTANI has secured  All India Rank 53 in CLAT organised by National Law School of India University, Bangalore
+					   
+					 
+		<hr/>			
+					     
+                        
+</p></a><br/>
+
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+                    	
+                       Vardaan Taneja, Class -X,has successfully cleared the qualifying round of 2016 Microsoft Office Specialist India CHAMPIONSHIP and was invited for India Finals in Power Point-2010 with a perfect score of 1000.
+					   
+					   
+				<hr/>	 
+					
+					     
+                        
+</p></a><br/>
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+                    	
+                     Tushhar Saha, Class-A1 achieved the 2nd position in India in Microsoft Office Powerpoint-2010 in National Finals-2016
+					  
+					
+			<hr/>		     
+                        
+</p></a><br/>
+
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;padding-left:2px;text-align:justify;">
+                    	
+                        Vatsal Bajaj from DPS International participated in the Royal Economic Society Essay Competition for "Young Economist of the Year" award for 2016-17.Out of the 1700 total entries he was the only Indian school student on the list.
+					   
+					 
+	<hr/>		     
+                        
+</p></a><br/>	
+					     
+      <a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+                    	
+                    Winners in Common Wealth Essay Writing Competition <br/>
+Arjun Gupta-                 Silver Medal<br/>
+Priyanshi Prasad-         Silver Medal<br/>
+Meher Yadav-               Silver Medal<br/>
+Aman Gulati-	    Silver Medal<br/>
+Arjun Loomba-	    Bronze Medal<br/>
+Inesh Chakravarty-        Bronze Medal<br/><br/><br/>
+					  
+					
+			<hr/>		     
+                        
+</p></a><br/>
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+                    	
+                   A preliminary discovery of an asteroid 15SF01 by DPS International students in a competition organized by Space    Organization in collaboration with NASA.
+					  
+					
+			<hr/>		     
+                        
+</p></a><br/>
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+                  Vardaan Taneja of class 10B has secured the fourth position in All India National Astronomy Olympiad 2015-16.
+					  
+					
+			<hr/>		     
+                        
+</p></a><br/>
+
+
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+                 Times NIE 'Student of the Year' for the year 2016-17 was awarded to Tushaar Saha for his excellent all round performance. 
+					  
+					
+			<hr/>		     
+                        
+</p></a><br/>
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+                Niharika Gupta and Tanush Jain of A2 have brought laurels to our school by being amongst the top 12  in The Global Talent Young India Award which was organised by Bournemouth University, UK. 
+					  
+					
+			<hr/>		     
+                        
+</p></a><br/>
+
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+               Ujaan Rakshit of class 5 and Ishan Gangly of class 9 have scored the highest in Maths in The National level benchmarking ASSET test of Summer 2016.
+					
+			<hr/>		     
+                        
+</p></a><br/>
+
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+              Ishan also scored the highest in English in The National level benchmarking ASSET  test of Summer 2016.
+					
+			<hr/>		     
+                        
+</p></a><br/>
+
+<a href="achievements.php" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size:18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;word-wrap: break-word;text-align:justify;padding-left:2px;">
+            10 Students of DPS International successfully completed in 2016 all the parameters for the IAYP – Bronze Award
+					
+			<hr/>		     
+                        
+</p></a><br/>
+</center>
+                    </marquee>
+ 
+
+
+<!--
+<div class="mySlides fade">
+ 
+  <img src="img/acheivements/1green.jpg" style="width:100%"><br/>
+  <div class="text"><br/>Asavari Singh Saigal 
+                     has won distinction in  Green Olympiad</div>
+</div>
+
+<div class="mySlides fade">
+ 
+  <img src="img/acheivements/2green.jpg" style="width:100%"><br/>
+  <div class="text"><br/>Paramita Mishra has secured 1st prize in EVM MUN</div>
+</div>
+
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+ 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+-->
+</A>
+   </td></tr>
+     <tr style="height:20px;"><td>
+
+
+    <div style="float:right;background:#02023a;height:20px;"> <a href="achievements.php" style="text-decoration:none;color:white;padding:10px;"  target="_blank">
+                                       Read More </a>
+     </div>
+
+	 </td></tr></table>
+	 </td>
+	 </tr>
+
+<!--
+
+  <tr style="height:150px">
+  <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;">
+   <table style="height:100%" border=0>
+  <tr><td style="vertical-align:top;">
+   <div style="height:30px;background:#ff9900;color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;box-shadow:5px 5px 5px 0px #888888;" >Go Green Initiatives</div>
+   <div style="text-align:center;padding:2px;margin:5px;color:#02023a;margin-top:10px;">
+   <img src="img/latesthappening/1.jpg" style="width:95%;box-shadow:5px 5px 5px 5px #888888;overflow:hidden;" /><br/>
+   <p style="text-align:justify;padding:10px;">
+   The students of class VI enthusiastically participated in the Math activity held on 11th April, 2016.  Students were required to solve a Maths Crossword based on the four basic operations on numbers. Students worked individually as it involved working with large numbers. Along with revising basic Maths skills, students also learnt to work out problems mentally and to manage time effectively. The students of class VI enthusiastically participated in the Math activity held on 11th April, 2016.  Students were required to solve a Maths Crossword based on the four basic operations on numbers. 
+   </p>
+   </div>
+   </td></tr>
+	<tr style="height:30px;"><td>
+                  
+
+
+    <div style="float:right;background:#02023a;height:30px;"> <a href="latesthappening.php" style="text-decoration:none;color:white;padding:10px;"  target="_blank">
+                                       Read More </a>
+     </div>
+     </td></tr></table>
+  </td>
+  <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;">
+   <table style="height:100%" border=0>
+  <tr><td style="vertical-align:top;">
+   <div style="height:30px;background:#ff9900;color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;box-shadow:5px 5px 5px 0px #888888;" >Video Gallery</div>
+
+   <div style="text-align:center;padding:2px;margin:5px;color:#02023a;margin-top:10px;">
+   <div class="post"> <span><a>Enthrelling Performance</a></span>
+   <!--<img src="img/latesthappening/1.jpg" style="width:95%;box-shadow:5px 5px 5px 5px #888888;overflow:hidden;border:5px solid orange" />-->
+  
+  
+  <!--<object  standby="Loading Microsoft® Windows® Media Player components..." type="application/x-oleobject" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsm p2inf.cab#Version=6,4,7,1112"> 
+<param name="fileName" value="videos/ach2015.wmv"> 
+<param name="autoStart" value="true"> 
+<param name="showControls" value="true"> 
+<param name="AllowChangeDisplaySize" value="true"> 
+<param name="ClickToPlay" value="true"> 
+<embed type="application/x-mplayer2" pluginspage="http://www.microsoft.com/Windows/MediaPlayer/" src="http://www.ladieda.com/mymovie.wmv" autoStart="true" ></embed>
+</object>
+<video width="320" height="240" autoplay >
+  <source src="videos/ach2015.wmv" type="video/wmv" >
+</video>
+   
+   <br/>
+   </div>
+
+   </div>
+   <div style="text-align:center;padding:2px;margin:5px;color:#02023a;margin-top:10px;">
+   <div class="post"> <span><a>Enthrelling Performance</a></span>
+   <img src="img/latesthappening/1.jpg" style="width:95%;box-shadow:5px 5px 5px 5px #888888;overflow:hidden;border:5px solid orange" /><br/>
+   </div>
+   </div>
+</td></tr>
+	<tr style="height:30px;"><td>
+                  
+
+    <div style="float:right;background:#02023a;height:30px;"> <a href="latesthappening.php" style="text-decoration:none;color:white;padding:10px;"  target="_blank">
+                                       Read More </a>
+     </div>
+     </td></tr></table>
+  </td>
+   <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;">
+   <table style="height:100%" border=0>
+  <tr><td style="vertical-align:top;">
+   <div style="height:30px;background:#ff9900;color:white;font-size:20px;text-align:center;font-weight:bold;font-family:Ubuntu;box-shadow:5px 5px 5px 0px #888888;" >Upcoming Events</div>
+<br/><br/>
+   <center>
+<a href="./DPSI EVENTS/08.08.2016.pdf" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size: 0.95em;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    	
+                       DPSI observed  International Day of the World's Indigenous Peoples
+					   <br/>
+					    <span style=" font-weight: bold;color: #008080;"> 09, August 2016</span>
+					 
+					
+					     
+                        
+</p></a><br/>
+
+<a href="./DPSI EVENTS/06.06.2016.pdf" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size: 0.95em;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    	
+                       DPSI organised Tree Plantation Drive at  delhi Railway Station
+					   <br/>
+					   <span style=" font-weight: bold;color: #008080;"> 06, June 2016</span>
+                        
+</p></a><br/>
+
+<a href="./DPSI EVENTS/06.06.2016.pdf" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size: 0.95em;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    	
+                       DPSI organised Tree Plantation Drive at  delhi Railway Station
+					   <br/>
+					   <span style=" font-weight: bold;color: #008080;"> 06, June 2016</span>
+                        
+</p></a><br/>
+
+<a href="./DPSI EVENTS/06.06.2016.pdf" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size: 0.95em;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    	
+                       DPSI organised Tree Plantation Drive at  delhi Railway Station
+					   <br/>
+					   <span style=" font-weight: bold;color: #008080;"> 06, June 2016</span>
+                        
+</p></a><br/>
+<a href="./DPSI EVENTS/06.06.2016.pdf" style="text-decoration:none;">
+
+<p  style="width:90%;border: black 1px;color: #202021;
+	font-size: 0.95em;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 3px 0 8px 0;border-radius:10px 10px 10px 10px;box-shadow: 2px 2px 2px 5px #888888;word-wrap: break-word;text-align:left;padding-left:2px;">
+                    	
+                       DPSI organised Tree Plantation Drive at  delhi Railway Station
+					   <br/>
+					   <span style=" font-weight: bold;color: #008080;"> 06, June 2016</span>
+                        
+</p></a><br/>
+					 
+					
+					     
+                        
+</center>
+</td></tr>
+	<tr style="height:30px;"><td>
+                  
+<div style="float:right;background:#02023a;height:30px;"> <a href="latesthappening.php" style="text-decoration:none;color:white;padding:10px;"  target="_blank">
+                                       Read More </a>
+     </div>
+	 </td></tr></table>
+  
+  </td>
+  </tr>-->
+ 
+  </table>
+</center>
+<br/>
+ <table width="99%" border=0  style="background-color: #02023a;
+  color:white;">
+
+  
+
+                 
+                         <tr style=" border-spacing: 0px;">
+                          <td bgcolor=#ff9900 colspan=6 style="height:7px; border-spacing: 0px;">
+                          </td>
+                          </tr>
+						  
+                         
+
+										<tr  style="border-spacing: 0px;font-size:14px;font-family:arial (Body);">
+                    <td width=15% style="vertical-align:top;text-align:center;">              
+              <a  style="text-decoration:none;color:white;font-family:arial" href="https://www.google.co.in/maps/place/DPS+International/@28.5275038,77.2237561,16z/data=!4m5!3m4!1s0x0:0x8ed8465dad0667a5!8m2!3d28.5278243!4d77.2240672l" target="_blank"><img src="img/googlemap.png"  width=27%  alt="DPSI Google Map" /><br/>
+			  </a>
+            </td>
+                       
+		    <td width=20% style="vertical-align:top;text-align:center;">
+			
+			<img src="img/Address.png" style="border-radius:15px;" width=20%  alt="DPSI Google Map" />
+			</td>
+
+			<td width=20% style="vertical-align:top;text-align:center;">
+			<img src="img/2073.png"  width=26%  alt="DPSI Google Map" /><br/>
+			
+			</td>
+			<td width=20% style="vertical-align:top;text-align:center;">
+			<a href="http://www.aiu.ac.in/index.asp" target="_blank"><img  src="img/aiu.png" width=20% /></a>
+			
+			</td>
+
+            <td width=15% style="vertical-align:top;text-align:center;">
+			<a href="http://www.cie.org.uk" target="_blank"><img src="img/uc.png" width=15% /> </a>
+			</td>
+
+			
+
+			
+
+                          </tr>
+						  <tr style="vertical-align:top;text-align:center;font-family:arial;line-height: 150%;color:white">
+						  <td>Find us with <br/>Google Map
+						  </td>
+						  <td>
+						
+			DPS International<br/>
+			P-37, M.B. Road,Sector-VI<br/>
+			Pushp Vihar, Saket<br/>
+			New Delhi,India-110057<br/>
+			
+						  </td>
+						  <td>
+			
+			#011-29561187, 29564889<br/>
+			Email: dpsi@vsnl.net, dpsi111@gmail.com
+						  </td>
+						  <td>
+			Recognized by <br/>Association of <br/>
+			Indian Universities
+						  </td>
+						  <td width=30%>
+						   Cambridge International Examinations<br>
+						   International School <br/>Center No:IN 409
+						  </td>
+						  
+                                      
+
+  </table>
+</body>
+</html>

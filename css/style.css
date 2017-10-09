@@ -1,0 +1,91 @@
+@font-face {
+   font-family: Abrade;
+   src: url("../fonts/abrade/Abrade.otf");
+}
+@font-face {
+   font-family: Abrade-Heavy;
+   src: url("../fonts/abrade/Abrade Heavy.otf");
+}
+@font-face {
+    font-family: Raleway;
+    src: url("../fonts/Raleway-Light.ttf");
+}
+
+body {
+    color: #797979;
+
+    /*font-family: 'Open Sans', sans-serif;*/
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 14px;
+    font-family: Raleway;
+
+}
+.block {
+    width:33%;
+    margin:20px;
+    background: white;
+    color:white;
+    box-shadow:1px 1px 1px 1px #888888;
+    vertical-align:top;
+    padding-top:1px;
+    font-family: Raleway !important;
+
+}
+
+.block h1 {
+
+    height:30px;
+    background:#ff9900;
+    color:white;
+    font-size: 20px;
+    font-size:1.39vw;
+    text-align:center;
+    font-weight:bold;
+    font-family:Raleway !important;
+    box-shadow:1px 1px 1px 0px #888888;
+    margin: auto;
+}
+.block h2 {
+    font-size: 20px;
+    font-size: 1.39vw;
+}
+.block .marquee1 {
+    height: 24vw;
+}
+.block .marquee2 {
+    height: 33vw;
+}
+.block div, .block p, .block td {
+    font-size: 1.25vw !important;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+::selection {
+    /*background: #48cfad;*/
+	background: #F28037;
+    color: #fff;
+}
+::-moz-selection {
+    background: #F28037;
+    color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*font-family: 'Open Sans', sans-serif;*/
+}
+a { color: #444e67 }
+a:hover { color: #F28037 }
+p { line-height: 22px }
+
+
+

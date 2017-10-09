@@ -1,0 +1,707 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<style type="text/css">
+
+div#wn { 
+	position:relative; 
+	
+	overflow:hidden;
+	}
+    
+div#inner1, div#inner2 {
+    white-space:nowrap;
+    }
+div#inner1 img {
+    padding-right:4px;
+    }
+    
+div#wn2	{ 
+	position:relative; 
+	
+	overflow:hidden;
+	}
+</style>
+<script src="js/dw_con_scroller.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+if ( DYN_WEB.Scroll_Div.isSupported() ) {
+	
+	DYN_WEB.Event.domReady( function() {
+		
+		// arguments: id of scroll area div, id of content div
+		var wndo = new DYN_WEB.Scroll_Div('wn', 'lyr1');
+		// see info online at http://www.dyn-web.com/code/scrollers/continuous/documentation.html
+		wndo.makeSmoothAuto( {axis:'h', bRepeat:true, repeatId:'rpt1', speed:100, bPauseResume:true} );
+		
+		var wndo2 = new DYN_WEB.Scroll_Div('wn2', 'lyr2');
+		wndo2.makeSmoothAuto( {axis:'h', bRepeat:true, repeatId:'rpt2', speed:60, bPauseResume:true} );
+    
+	});
+}
+
+</script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link href="./gallerycode/magnific-popup.css" rel="stylesheet">
+    <script type="text/javascript" src="./gallerycode/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./gallerycode/jquery.magnific-popup.min.js"></script>
+
+<style>
+.nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  
+}
+.spacer {
+  height: 100px;
+}
+.post span {
+  position: absolute;
+  float:bottom;
+  
+}
+.post img {
+  width: 100%;
+}
+</style>
+<style>
+/* Style The Dropdown Button */
+.dropbtn {
+   background:none;
+    color: black;
+  font-size:22px;
+font-family:Arial;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn a:hover {background-color: #CEF6F5;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 280px;
+  	font-size:20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+    z-index: 5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+	 border-bottom: 2px solid #02023a;
+	 	font-size:20px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #CEF6F5;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #CEF6F5;
+}
+
+
+#slides{
+    position: relative;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slide:nth-of-type(1){
+    background: red;
+}
+.slide:nth-of-type(2){
+    background: orange;
+}
+.slide:nth-of-type(3){
+    background: green;
+}
+.slide:nth-of-type(4){
+    background: blue;
+}
+.slide:nth-of-type(5){
+    background: purple;
+}
+</style>
+<style>
+
+.mySlides2 {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #02023a;
+  height:10px;
+ 
+  font-weight:bold;
+font-size:18px;
+  padding-top:70% ;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  
+}
+
+.active {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 100px) {
+  .text {font-size: 11px}
+}
+</style>
+
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:bold">
+<link rel="stylesheet" type="text/css"  href='http://fonts.googleapis.com/css?family=Dancing+Script'>
+</head>
+<body >
+   <div class="nav">
+    <table width="99%" border="0" style = "background:#02023a">
+        <tr>
+            <td >
+                <a href="newindex.html" style="text-decoration:none;">
+                    <table border=0 style="opacity: 1;
+                        color:white;">
+                        <tr>
+                            <td>
+                                <img src="img/dpslogo.png" width=10% alt="DPSI Logo"  style="float:left;"/>
+                                <font style="margin-left:5px;font-size:30px;font-family:Abrade">DPS INTERNATIONAL SCHOOL</font><BR/><font style="margin-left:6px;font-family:Abrade"> NEW DELHI, INDIA</font>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </td>
+            <td   style="text-align:right;vertical-align:top;font-family:Abrade;font-size:14px;">
+                <a href="newindex.html" style="color:white;margin-right:5px">Home</a>/
+                <a href="contactus.html" target="_blank" style="color:white;margin-right:5px">Contact Us</a>/
+                <a href="achievements.html"  target="_blank" style="color:white;margin-right:5px">A-Z index</a>/
+                <!--<a href="achievements.html" style="color:white;margin-right:5px">Language</a><br/>-->
+            </td>
+            <style> /*!-- Added by Tanavya. Should be moved to separate main.css file in the future*/
+                .login_table {
+                    margin-right: 15px;
+                }
+                .login_table td {
+                    padding: 1px 10px 1px 5px;
+                }
+                .enter_box {
+                    height: 20px;
+                    border-radius: 2px;
+                    display: block;
+                    color:black;
+                    width:100%;
+                    margin:auto;
+                }
+                .input_field {
+                    text-indent: 5px;
+                }
+                input {
+                    border: 1px solid #eee;;
+                    background: white;
+                    min-width: 5em;
+                }
+
+            </style>
+            <td style="vertical-align:top;
+                color:white;">
+                <div align="right" >
+                    <table class = "login_table" style="color:white; font-size: 14px" border="0">
+                        <tr>
+                            <td colspan = "2">
+                                <input type="text" class = "enter_box input_field" placeholder="Username"/>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td colspan = "2">
+                                <input type="password" class = "enter_box input_field" placeholder="Password"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <a href = "forgot_password.html" style = "color: white"> Forgot Password? </a></td>
+                            <td>
+                                <input type="submit" class = "enter_box" style = "background grey;" value = "Log In"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr style=" border-spacing: 0px;height:5px;background: #ffd11a ">
+            <td align=center colspan=3></td>
+        </tr>
+        <style>
+            a {
+                font-family: Abrade;
+            }
+        </style>
+        <tr style=" border-spacing: 0px;">
+            <td align=center colspan=3>
+                <table width=100% border=0 style="min-width: 1440px; text-align:left;background:#ffd11a;color:blue; border-spacing: 0px;">
+                    <tr style="height:30px">
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a href="aboutus.html" target="_blank" style = "font-family: Abrade;">About Us </a></button>
+                                <div class="dropdown-content">
+                                    <a href="dpssociety.html" style="text-decoration:none;color:black;"  >DPS Society </a>
+                                    <a  href="principal.html" style="text-decoration:none;color:black">Principal's Message</a>
+                                    <a  href="mission.html" style="text-decoration:none;color:black">Mission & Vision</a>
+                                    <a  href="team.html" style="text-decoration:none;color:black">Our Academic Team</a>
+                                    <!--<a href="infrastructure.html" style="text-decoration:none;color:black;" target="_blank">
+                                        Infrastructure
+                                        </a>-->
+                                </div>
+                            </div>
+                        </td>
+                        <!--
+                            <td>
+                                <div class="dropdown">
+                                <button class="dropbtn"> <a href="awards.html"  style="text-decoration:none;color:black;"  target="_blank">Awards </a></button>
+                                 <div class="dropdown-content">
+                                 <a href="awards.html" style="text-decoration:none;color:black;"  >School's Awards </a>
+                                <a  href="studentaward.html" style="text-decoration:none;color:black">Students' Awards</a>
+                                 <a  href="teacheraward.html" style="text-decoration:none;color:black">Teachers' Awards</a>
+
+                              </div>
+                               </div>
+                            </td>
+
+                            -->
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a href="results.html"  style="text-decoration:none;color:black;"  target="_blank">Results </a></button>
+                                <div class="dropdown-content">
+                                    <a href="globaltoppers.html" style="text-decoration:none;color:black;"  >Globals/All India Toppers  </a>
+                                    <a  href="Aleveltoppers.html" style="text-decoration:none;color:black">A Level School Toppers</a>
+                                    <a href="Igcsetoppers.html" style="text-decoration:none;color:black;"  >IGCSE  School Toppers</a>
+                                    <a  href="Interschoolcompetitionresults.html" style="text-decoration:none;color:black">Inter School Competition</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a href="universityadmissions.html" target="_blank" style="text-decoration:none;color:black;" >
+                                University Placements </a></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="admission.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Admissions </a>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn">  <a   href="schoolprogrammes.html" style="text-decoration:none;color:black;" target="_blank">
+                                School Programmes </a>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="academiccurriculum.html" style="text-decoration:none;" target="_blank">Academic Curriculum</a>
+                                    <a href="cocurriculum.html" style="text-decoration:none;" target="_blank">Co- Curricular</a>
+                                    <a href="academictiming.html" style="text-decoration:none;" target="_blank">Academic Terms & Timings</a>
+                                    <a href="assessmentschedule.html" style="text-decoration:none;" target="_blank">Assessment Schedule</a>
+                                    <a href="communityservices.html" style="text-decoration:none;" target="_blank">
+                                    Community Service</a>
+                                    <a href="mun.html" style="text-decoration:none;" target="_blank">Model United Nations</a>
+                                    <a href="internationalexchanges.html" style="text-decoration:none;" target="_blank">
+                                    International Exchanges</a>
+                                    <a href="facetofaith.html" style="text-decoration:none;" target="_blank">Generation Global Programme</a>
+                                    <a href="middaymeal.html" style="text-decoration:none;" target="_blank">Mid Day Meal</a>
+                                    <a href="transportation.html" style="text-decoration:none;" target="_blank">Transportation</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="calendar.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Calendar </a>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="alumni.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Alumni </a>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="gallery.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Gallery </a>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="vacancy.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Job Vacancy </a>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr   style=" border-spacing: 0px;height:5px;background:#ffd11a">
+            <td align=center colspan=3></td>
+        </tr>
+    </table>
+</div>
+<br/>
+<br/><!--top header inserted here-->
+
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+ 
+   </body>
+   </html>
+   <center>
+<table border=0 style="top-margin:0 px;width:100%;overflow: hidden;background:white;font-size:16px;font-family:Arial;line-height: 150%;text-align:justify;margin:0px;height:500px">
+                           
+
+                             <tr> <td  style="vertical-align:top;"> 
+							 <div align=right><font style="font-size:20px;color:white;background-color:#000033;font-family:arial;"> School Calendar </font></div>
+							 
+							 <p style="margin:10px;">The DPS International School Calendar for 2017-2018 is below.</p>
+							 <table cellpadding=10px> <tr><td>
+							 <div style="background-color:#02023a;color:white;width:50px;">&nbsp
+							 </div></td><td> Special Holi Day</td>
+
+							  <td><div style="background-color:#b1dae7;color:white;width:50px;">&nbsp
+							 </div></td><td>Summer/Winter Vacations
+							 </td>
+							 <td><div style="background-color:#b1dae7;color:white;width:50px;">&nbsp
+							 </div></td><td>Sunday/Saturday Off  
+							 </td>
+
+							 <td><div style="background-color:orange;color:white;width:50px;">&nbsp
+							 </div></td><td>Weekly/ Summative Assessment
+							 </td>
+
+							 
+							 
+							 </tr></table>
+							 <table width=80% cellpadding=10px cellspacing=10px border=0 style="box-shadow:5px 5px 5px 5px #888888;">
+							 <tr>
+							  <td>
+							     <div style="background-color:#ffd11a;color:#02023a;font-weight:bold;font-size:25px;height:30px;text-align:center;">
+								  
+								    April 2017
+									
+
+
+								 </div>
+								 
+								 <table width=100% cellpadding=10px cellspacing=30px style="  border-width: thin;
+                                  border-spacing: 0px;
+                                    border-style: none;
+                                        border-color: orange;text-align:center;font-weight:bold;"  border=1>
+								         <tr><th style="background-color:#b1dae7;">Sun
+                                              </th>
+											  <th style="background-color:#b1dae7;">Mon
+											  </th>
+											  <th style="background-color:#b1dae7;">Tue
+											  </th>
+											  <th style="background-color:#b1dae7;">Wed
+											  </th>
+											  <th style="background-color:#b1dae7;">Thu
+											  </th>
+											  <th style="background-color:#b1dae7;">Fri
+											  </th>
+											  <th style="background-color:#b1dae7;">Sat
+											  </th>
+										</tr>
+										<tr>
+										      <td style="background-color:#b1dae7;opacity:0.8"> 
+                                              </td>
+											  <td>
+											  </td>
+											  <td>
+											  </td>
+											  <td>
+											  </td>
+											  <td>
+											  </td>
+											  <td>
+											  </td>
+											 <td style="background-color:#b1dae7;opacity:0.8">1
+											     
+											  </td>
+										</tr>
+										<tr>
+										      <td style="background-color:#b1dae7;opacity:0.8"> 2
+                                              </td>
+											  <td>3
+											  </td>
+											  <td style="background-color:#02023a;color:white;"><div class="tooltip" >4<br/>
+                                             <span class="tooltiptext">Ram Navami</span>
+                                                   </div>
+
+											  </td>
+											  <td>5
+											  </td>
+											  <td>6
+											  </td>
+											  <td>7
+											  </td>
+											<td style="background-color:#b1dae7;opacity:0.8">8
+											     
+											  </td>
+										</tr>
+										<tr>
+										      <td style="background-color:#02023a;color:white">
+											  <div class="tooltip" >9<br/>
+                                             <span class="tooltiptext">Mahavir Jayanti</span>
+                                                   </div>
+
+											
+                                              </td>
+											  <td>10
+											  </td>
+											  <td>11
+											  </td>
+											  <td>12
+											  </td>
+											  <td>13
+											  </td>
+											  <td style="background-color:#02023a;color:white;"><div class="tooltip" >14<br/>
+                                             <span class="tooltiptext">Good Friday</span>
+                                                   </div>
+											  </td>
+											 <td style="background-color:#b1dae7;opacity:0.8">15
+											     
+											  </td>
+										</tr>
+										<tr>
+										      <td style="background-color:#b1dae7;opacity:0.8"> 16
+                                              </td>
+											  <td>17
+											  </td>
+											  <td>18
+											  </td>
+											  <td>19
+											  </td>
+											  <td>20
+											  </td>
+											  <td>21
+											  </td>
+										<td style="background-color:#b1dae7;opacity:0.8">22
+											     
+											  </td>
+										</tr>
+										<tr>
+										      <td style="background-color:#b1dae7;opacity:0.8"> 23
+                                              </td>
+											 <td style="background-color:orange;color:white"><div class="tooltip" >24<br/>
+                                             <span class="tooltiptext">Weekly Assessment</span>
+                                                   </div>
+											  </td>
+											  <td>25
+											  </td>
+											  <td>26
+											  </td>
+											  <td>27
+											  </td>
+											  <td>28
+											  </td>
+											  <td style="background-color:#b1dae7;opacity:0.8">29
+											     
+											  </td>
+										</tr>
+										<tr>
+										      <td style="background-color:#b1dae7;opacity:0.8"> 30
+                                              </td>
+											  <td>
+											  </td>
+											  <td>
+											  </td>
+											  <td>
+											  </td>
+											  <td>
+											  </td>
+											  <td>
+											  </td>
+											  <td style="background-color:#b1dae7;opacity:0.8">
+											     
+											  </td>
+										</tr>
+								  </table>
+
+
+							    </td>
+								
+								
+							  </tr>
+							  </table>
+							  
+                              
+	                               
+   <br/>
+   <div align=right style="padding-right:300px;">
+							  <form method=post action="may.html">
+                                
+								  <input style="border:7px solid #02023a; color: #02023a;background:#ffd11a;font-size:20px;" type="submit" value="Next Month" />
+							  </form>                               
+							   </div>
+   
+
+                             
+							
+								   
+                
+									 
+                              
+                            
+
+  
+ </td> 
+ 
+ 
+ 
+ 
+ 
+</tr></table>
+  
+
+</center>
+
+
+<center>
+
+
+<table border=0 style="top-margin:0 px;width:100%;overflow: hidden;background:white;">
+                           
+
+                             <tr>      
+       
+	                              
+   
+   
+
+                             
+								   <td >
+								   
+  <p style="text-align:justify; color:#000033; font-size:12px;vertical-align:top;margin:50px;font-family:arial;line-height: 450%;height:400px;">
+  <font size=8px color=#000033 style="font-family:Monotype Corsiva;">Thank You 
+  !<br/>
+  Your Query have been submitted. <br/>
+  Our representative will contact you soon.</Font><br/><br/>
+  
+								
+  </p>                                  </td>
+									 
+                              </td>
+                              </tr>
+
+  
+</table>
+  
+
+</center>

@@ -1,0 +1,633 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<style type="text/css">
+
+div#wn { 
+	position:relative; 
+	
+	overflow:hidden;
+	}
+    
+div#inner1, div#inner2 {
+    white-space:nowrap;
+    }
+div#inner1 img {
+    padding-right:4px;
+    }
+    
+div#wn2	{ 
+	position:relative; 
+	
+	overflow:hidden;
+	}
+</style>
+<script src="js/dw_con_scroller.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+if ( DYN_WEB.Scroll_Div.isSupported() ) {
+	
+	DYN_WEB.Event.domReady( function() {
+		
+		// arguments: id of scroll area div, id of content div
+		var wndo = new DYN_WEB.Scroll_Div('wn', 'lyr1');
+		// see info online at http://www.dyn-web.com/code/scrollers/continuous/documentation.html
+		wndo.makeSmoothAuto( {axis:'h', bRepeat:true, repeatId:'rpt1', speed:100, bPauseResume:true} );
+		
+		var wndo2 = new DYN_WEB.Scroll_Div('wn2', 'lyr2');
+		wndo2.makeSmoothAuto( {axis:'h', bRepeat:true, repeatId:'rpt2', speed:60, bPauseResume:true} );
+    
+	});
+}
+
+</script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link href="./gallerycode/magnific-popup.css" rel="stylesheet">
+    <script type="text/javascript" src="./gallerycode/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./gallerycode/jquery.magnific-popup.min.js"></script>
+
+<style>
+.nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  
+}
+.spacer {
+  height: 100px;
+}
+.post span {
+  position: absolute;
+  float:bottom;
+  
+}
+.post img {
+  width: 100%;
+}
+</style>
+<style>
+/* Style The Dropdown Button */
+.dropbtn {
+   background:none;
+    color: black;
+  font-size:22px;
+font-family:Arial;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn a:hover {background-color: #CEF6F5;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 280px;
+  	font-size:20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+    z-index: 5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+	 border-bottom: 2px solid #02023a;
+	 	font-size:20px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #CEF6F5;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #CEF6F5;
+}
+
+
+#slides{
+    position: relative;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slide:nth-of-type(1){
+    background: red;
+}
+.slide:nth-of-type(2){
+    background: orange;
+}
+.slide:nth-of-type(3){
+    background: green;
+}
+.slide:nth-of-type(4){
+    background: blue;
+}
+.slide:nth-of-type(5){
+    background: purple;
+}
+</style>
+<style>
+
+.mySlides2 {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #02023a;
+  height:10px;
+ 
+  font-weight:bold;
+font-size:18px;
+  padding-top:70% ;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  
+}
+
+.active {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 100px) {
+  .text {font-size: 11px}
+}
+</style>
+
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:bold">
+<link rel="stylesheet" type="text/css"  href='http://fonts.googleapis.com/css?family=Dancing+Script'>
+</head>
+<body >
+   <div class="nav">
+    <table width="99%" border="0" style = "background:#02023a">
+        <tr>
+            <td >
+                <a href="newindex.html" style="text-decoration:none;">
+                    <table border=0 style="opacity: 1;
+                        color:white;">
+                        <tr>
+                            <td>
+                                <img src="img/dpslogo.png" width=10% alt="DPSI Logo"  style="float:left;"/>
+                                <font style="margin-left:5px;font-size:30px;font-family:Abrade">DPS INTERNATIONAL SCHOOL</font><BR/><font style="margin-left:6px;font-family:Abrade"> NEW DELHI, INDIA</font>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </td>
+            <td   style="text-align:right;vertical-align:top;font-family:Abrade;font-size:14px;">
+                <a href="newindex.html" style="color:white;margin-right:5px">Home</a>/
+                <a href="contactus.html" target="_blank" style="color:white;margin-right:5px">Contact Us</a>/
+                <a href="achievements.html"  target="_blank" style="color:white;margin-right:5px">A-Z index</a>/
+                <!--<a href="achievements.html" style="color:white;margin-right:5px">Language</a><br/>-->
+            </td>
+            <style> /*!-- Added by Tanavya. Should be moved to separate main.css file in the future*/
+                .login_table {
+                    margin-right: 15px;
+                }
+                .login_table td {
+                    padding: 1px 10px 1px 5px;
+                }
+                .enter_box {
+                    height: 20px;
+                    border-radius: 2px;
+                    display: block;
+                    color:black;
+                    width:100%;
+                    margin:auto;
+                }
+                .input_field {
+                    text-indent: 5px;
+                }
+                input {
+                    border: 1px solid #eee;;
+                    background: white;
+                    min-width: 5em;
+                }
+
+            </style>
+            <td style="vertical-align:top;
+                color:white;">
+                <div align="right" >
+                    <table class = "login_table" style="color:white; font-size: 14px" border="0">
+                        <tr>
+                            <td colspan = "2">
+                                <input type="text" class = "enter_box input_field" placeholder="Username"/>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td colspan = "2">
+                                <input type="password" class = "enter_box input_field" placeholder="Password"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <a href = "forgot_password.html" style = "color: white"> Forgot Password? </a></td>
+                            <td>
+                                <input type="submit" class = "enter_box" style = "background grey;" value = "Log In"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr style=" border-spacing: 0px;height:5px;background: #ffd11a ">
+            <td align=center colspan=3></td>
+        </tr>
+        <style>
+            a {
+                font-family: Abrade;
+            }
+        </style>
+        <tr style=" border-spacing: 0px;">
+            <td align=center colspan=3>
+                <table width=100% border=0 style="min-width: 1440px; text-align:left;background:#ffd11a;color:blue; border-spacing: 0px;">
+                    <tr style="height:30px">
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a href="aboutus.html" target="_blank" style = "font-family: Abrade;">About Us </a></button>
+                                <div class="dropdown-content">
+                                    <a href="dpssociety.html" style="text-decoration:none;color:black;"  >DPS Society </a>
+                                    <a  href="principal.html" style="text-decoration:none;color:black">Principal's Message</a>
+                                    <a  href="mission.html" style="text-decoration:none;color:black">Mission & Vision</a>
+                                    <a  href="team.html" style="text-decoration:none;color:black">Our Academic Team</a>
+                                    <!--<a href="infrastructure.html" style="text-decoration:none;color:black;" target="_blank">
+                                        Infrastructure
+                                        </a>-->
+                                </div>
+                            </div>
+                        </td>
+                        <!--
+                            <td>
+                                <div class="dropdown">
+                                <button class="dropbtn"> <a href="awards.html"  style="text-decoration:none;color:black;"  target="_blank">Awards </a></button>
+                                 <div class="dropdown-content">
+                                 <a href="awards.html" style="text-decoration:none;color:black;"  >School's Awards </a>
+                                <a  href="studentaward.html" style="text-decoration:none;color:black">Students' Awards</a>
+                                 <a  href="teacheraward.html" style="text-decoration:none;color:black">Teachers' Awards</a>
+
+                              </div>
+                               </div>
+                            </td>
+
+                            -->
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a href="results.html"  style="text-decoration:none;color:black;"  target="_blank">Results </a></button>
+                                <div class="dropdown-content">
+                                    <a href="globaltoppers.html" style="text-decoration:none;color:black;"  >Globals/All India Toppers  </a>
+                                    <a  href="Aleveltoppers.html" style="text-decoration:none;color:black">A Level School Toppers</a>
+                                    <a href="Igcsetoppers.html" style="text-decoration:none;color:black;"  >IGCSE  School Toppers</a>
+                                    <a  href="Interschoolcompetitionresults.html" style="text-decoration:none;color:black">Inter School Competition</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a href="universityadmissions.html" target="_blank" style="text-decoration:none;color:black;" >
+                                University Placements </a></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="admission.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Admissions </a>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn">  <a   href="schoolprogrammes.html" style="text-decoration:none;color:black;" target="_blank">
+                                School Programmes </a>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="academiccurriculum.html" style="text-decoration:none;" target="_blank">Academic Curriculum</a>
+                                    <a href="cocurriculum.html" style="text-decoration:none;" target="_blank">Co- Curricular</a>
+                                    <a href="academictiming.html" style="text-decoration:none;" target="_blank">Academic Terms & Timings</a>
+                                    <a href="assessmentschedule.html" style="text-decoration:none;" target="_blank">Assessment Schedule</a>
+                                    <a href="communityservices.html" style="text-decoration:none;" target="_blank">
+                                    Community Service</a>
+                                    <a href="mun.html" style="text-decoration:none;" target="_blank">Model United Nations</a>
+                                    <a href="internationalexchanges.html" style="text-decoration:none;" target="_blank">
+                                    International Exchanges</a>
+                                    <a href="facetofaith.html" style="text-decoration:none;" target="_blank">Generation Global Programme</a>
+                                    <a href="middaymeal.html" style="text-decoration:none;" target="_blank">Mid Day Meal</a>
+                                    <a href="transportation.html" style="text-decoration:none;" target="_blank">Transportation</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="calendar.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Calendar </a>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="alumni.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Alumni </a>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="gallery.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Gallery </a>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"> <a   href="vacancy.html" style="text-decoration:none;color:black;"  target="_blank">
+                                Job Vacancy </a>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr   style=" border-spacing: 0px;height:5px;background:#ffd11a">
+            <td align=center colspan=3></td>
+        </tr>
+    </table>
+</div>
+<br/>
+<br/><!--top header inserted here-->
+
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+ 
+   </body>
+   </html>
+   
+
+<body style="background:white;">
+<center>
+
+<table   style="top-margin:0 px;width:100%;overflow: hidden;background:white; ">
+                           
+								     
+									<tr style="height:30px;"> <td colspan=2 style="vertical-align:top;">  <div align=right><a href="alumni.html" style="text-decoration:none;"><font style="font-size:20px;color:white;background-color:#000033;font-family:arial;"> Alumni </font></a></div></td>
+								  </tr> 
+</table>
+ 
+                                 
+  
+
+
+  <table width=1200px  style="background: white;box-shadow:5px 5px 5px 5px #888888;" cellspacing=30px >
+  
+
+ <tr style="height:300px">
+  <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;">
+
+  <div style="background:
+#ff9900 ;height:10px" >
+	  </div>
+	  <div style="background:#CEF6F5;height:100px;text-align:center" >
+	  <center>
+	  <table>
+	  <tr>
+	  <td>
+	  <img src="img/dpslogo.png" width=100% alt="DPSI Logo"  style="float:left;"/>
+	  </td>
+	  <td>
+	        <font size=6 color=grey style="font-family:Arial, Helvetica, sans-serif"> Delhi Public School International Alumni </font>
+	  </td>
+	  </tr>
+	  </table>
+      </center>
+	  </div>
+	  <div style="background:
+#ff9900 ;height:10px" >
+	  </div>
+       <br/><br/>
+
+<center>
+	  
+
+<div class="w3-content w3-section" style="max-width:90%;box-shadow: 5px 0px 10px 10px #888888;">
+
+
+  <img class="mySlides" src="img/alumni/meet.jpg" style="width:100%;">
+  <img class="mySlides" src="img/alumni/2.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/3.png" style="width:100%;">
+ <img class="mySlides" src="img/alumni/4.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/5.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/6.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/7.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/8.png" style="width:100%;">
+	<img class="mySlides" src="img/alumni/9.jpg" style="width:100%;">  
+ <img class="mySlides" src="img/alumni/10.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/11.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/12.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/13.jpg" style="width:100%;">
+ <img class="mySlides" src="img/alumni/14.jpg" style="width:100%;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br/>
+<br/>
+	  
+</center>
+  </td>
+  
+  </tr>
+
+  </table> 
+  
+
+<br/>
+<br/>
+
+  <table width=1200px  style="background: white;box-shadow:5px 5px 5px 5px #888888;" cellspacing=30px >
+  
+
+ <tr >
+  <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;">
+
+  <div style="background:
+#ff9900 ;height:10px" >
+	  </div>
+	  <table width=100% border=0>
+	  <tr>
+	  <td width=70%>
+	  <div style="background:#02023a ;color:white;padding:5px" >
+	 
+	  <p style="text-align:justify; font-size:20px; padding:5px; font-family: Arial, Helvetica, sans-serif;">
+	  DPS International invites you to be a part of alumni of DPS International's Alumni : Memoirs !<br/> <br/>Please fill in the registration form below to ensure that you can be a part of alumni events, receive regular updates, and see where our illustrious alumni are making news!<br/><br/>
+
+Please send any queries to our e-mail:  <font color=yellow> dpsi.aluminfo@gmail.com </font>
+	  </p>
+	  </div>
+	  </td>
+	  <td style="background:#ff9900 ;">
+	     <div style="background:#CEF6F5 ;color:grey;padding:10px;text-align:center" >
+	 <a href="http://dpsi.ac.in/dpsinternational/Userform/Alumni/AlumniRegistrationForm.asp" target="_blank" style="text-decoration:none;">
+	         <font size=6 color=grey style="font-family:Arial, Helvetica, sans-serif">Click Here For  Alumni Registration Form !</font>
+			 </a>
+	  </div>
+	  
+	  </td>
+	  </tr>
+	  </table>
+	  <div style="background:
+#ff9900 ;height:10px" >
+	  </div>
+       
+      
+	  
+  
+  </td>
+  
+  </tr>
+
+  </table>
+
+  <br/><br/>
+  <!--
+  <table width=1200px  style="background: white;box-shadow:5px 5px 5px 5px #888888;" cellspacing=30px >
+  
+
+ <tr >
+  <td style="width:32%;margin:20px;background: white;
+  color:white;box-shadow:5px 5px 5px 5px #888888;vertical-align:top;padding-top:5px;text-align:center">
+
+        <img src="img/alumni/a0.jpg"  />
+		 <img src="img/alumni/a1.jpg"  />
+		  <img src="img/alumni/a2.jpg"  />
+
+
+		 <br/><br/><br/>
+
+
+		  <img src="img/alumni/a3.jpg"  />
+		 <img src="img/alumni/a4.jpg"  />
+		  <img src="img/alumni/a5.jpg"  />
+
+  </td>
+  </tr>
+  </table>-->
+
+</center>
+</body>
