@@ -28,6 +28,8 @@ body {
 }
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 /* resets */
+
+
 .footer {
   width: 100% !important;
   box-sizing: border-box !important;
@@ -66,7 +68,7 @@ a {
 .nav {
     height: 80px;
     width: 100%;
-    position: relative;
+    position: relative !important;
     z-index: 100;
 }
 .spacer {
