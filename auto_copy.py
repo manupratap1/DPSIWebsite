@@ -1,16 +1,18 @@
 #Use this file so that changes are reflected in all files
 import os
 directory = os.getcwd()
-"""
+
 with open(directory + "/" + "header_new.html") as f:
     to_replace = f.read()
+
 """
 with open(directory + "/" + "footer.html") as f:
     footer = f.read()
-#start_point = '<div class="nav">'
-#end_point = '<!--top header inserted here-->'
-start_point = '<table border=0 style="top-margin:0 px;width:100%;overflow: hidden;background:white;font-size:16px;font-family:Arial;line-height: 150%;text-align:justify;margin:0px;height:500px">'
-end_point = '</center>'
+"""
+start_point = '<div class="nav">'
+end_point = '<!--top header inserted here-->'
+#start_point = '<table border=0 style="top-margin:0 px;width:100%;overflow: hidden;background:white;font-size:16px;font-family:Arial;line-height: 150%;text-align:justify;margin:0px;height:500px">'
+#end_point = '</center>'
 for filename in os.listdir(directory):
     if filename.endswith("html") and filename not in ["header_new.html" ,"footer.html", "index.html"]:
 
@@ -18,7 +20,7 @@ for filename in os.listdir(directory):
         with open(directory + "/" + filename, "r") as f:
             txt = f.read()
         idx_beg = txt.find(start_point)
-        """
+        
         if idx_beg == -1:
             print "start point not found in", filename
         else:
@@ -26,7 +28,9 @@ for filename in os.listdir(directory):
             if idx_beg == -1:
                 print "weird. not end point not found in", filename
             else:
-                txt = txt[:idx_beg] + txt[idx_end:]
+                #print idx_beg, idx_end
+                txt = txt[:idx_beg] + to_replace + txt[idx_end:]
+        #break
         """
         txt = txt.replace("</body>", "")
         txt = txt.replace("<table width=1200px", "<table ")
@@ -37,6 +41,7 @@ for filename in os.listdir(directory):
         txt = txt.replace("Arial", "Raleway")
         txt = txt.replace("arial", "Raleway")
         txt = txt.replace("ARIAL", "Raleway")
+        """
 
         """
         idx_beg = txt.find(start_point)

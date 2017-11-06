@@ -16,7 +16,7 @@ body {
     color: black;
     padding: 0px !important;
     margin: 0px !important;
-    font-size: 14px;
+    /*font-size: 14px;*/
     font-family: Raleway !important;
 }
 a {
@@ -31,7 +31,6 @@ a {
 }
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 /* resets */
-
 
 .footer {
   width: 100% !important;
@@ -282,16 +281,44 @@ div.pullUpDown a:hover:after {
 .login_table td {
     padding: 1px 10px 1px 5px;
 }
+@media all and (max-width: 800px) {
+  .t1 {
+    font-size: 23px !important;
+  }
+  .t2 {
+    font-size: 15px !important;
+  }
+}
 @media all and (max-width: 600px) {
     .login_table {
         margin-top: 10px;
         width: 205px;
+        font-size: 13px !important;
     }
     .extra-options {
+        font-size: 13px !important;
         position: absolute;
         top: 95px;
-        right: 10px;
+        right: 15px;
     }
+}
+@media all and (max-width: 400px) {
+  .login_table {
+    font-size: 11px !important; 
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  .extra-options {
+    top: 100px;
+    font-size: 11px !important;
+  }
+  .t1 {
+    font-size: 20px !important;
+  }
+  .t2 {
+    font-size: 13px !important;
+  }
+
 }
 .enter_box {
     height: 20px;
@@ -315,14 +342,6 @@ input {
     margin: 0 auto;
     padding: 20px;
     max-width: 95%;
-}
-h1 {
-    font-family: "Lobster", cursive;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-h2 {
-    font-weight: 700;
 }
 /* grid */
 
@@ -477,14 +496,7 @@ a:focus {
     background: #F28037;
     color: #fff;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    /*font-family: 'Open Sans', sans-serif;*/
-}
+
 a {
     color: #444e67
 }
